@@ -22,6 +22,10 @@ $(document).ready(function () {
          The body of the loop should contain the statement:
          addImageToDiv("#while-loop");
         */
+        while (num < 6) {
+            addImageToDiv("#while-loop");
+            num++;
+        }
 
 
 
@@ -33,6 +37,10 @@ $(document).ready(function () {
          The body of the loop should contain the statement:
          addImageToDiv("#do-while-loop");
         */
+        do {
+            addImageToDiv("#do-while-loop");
+            num++;
+        } while (num < 4);
 
 
 
@@ -44,6 +52,9 @@ $(document).ready(function () {
          The body of the loop should contain the statement:
          addImageToDiv("#for-loop");
         */
+        for (var num = 0; num < 5; num++) {
+            addImageToDiv("#for-loop");
+        }
 
 
 
