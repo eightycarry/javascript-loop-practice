@@ -30,7 +30,7 @@ $(document).ready(function () {
 function runLoops() {
     // This variable will contain one of three strings:
     // "for-loop", "while-loop", or "do-while-loop"
-    var selectedLoop = $("input[name=loop-type]:checked").val();
+    //var selectedLoop = $("input[name=loop-type]:checked").val();
 
     /*
         Depending on which loop was selected,
@@ -43,11 +43,11 @@ function runLoops() {
         "while-loop"    ==>  runWhileLoop()
         "do-while-loop" ==>  runDoWhileLoop()
     */
-    if ($("input[value=while-loop]:checked")) {
+    if ($("input[id=while-loop]:checked")) {
         runWhileLoop();
-    } else if ($("input[value=do-while-loop]:checked")) {
+    } else if ($("input[id=do-while-loop]:checked")) {
         runDoWhileLoop()
-    } else if ($("input[value=for-loop]:checked")) {
+    } else if ($("input[id=for-loop]:checked")) {
         runForLoop()
     }
 }
@@ -81,8 +81,8 @@ function runForLoop() {
         Use a for loop to add the numbers 1 through "number"
         into the variable "sum".
     */
-    for (sum = 0; sum < number; sum++) {
-        sum = number + "1";
+    for (sum = 0; number <= 1; number--) {
+        sum += number;
     }
 
     $("#for-result").text(sum);
