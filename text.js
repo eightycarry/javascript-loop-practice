@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $("button").click(runLoops);
+
     var myRules = {
         myNumber:
             {
@@ -41,11 +43,13 @@ function runLoops() {
         "while-loop"    ==>  runWhileLoop()
         "do-while-loop" ==>  runDoWhileLoop()
     */
-
-
-
-
-
+    if ($("input[value=while-loop]:checked")) {
+        runWhileLoop();
+    } else if ($("input[value=do-while-loop]:checked")) {
+        runDoWhileLoop()
+    } else if ($("input[value=for-loop]:checked")) {
+        runForLoop()
+    }
 }
 
 
@@ -60,6 +64,9 @@ function runWhileLoop() {
 
         (Or for a challenge, concatenate the first "number" letters of the alphabet!)
     */
+    while (output.length < number) {
+        output += "A";
+    }
 
 
     $("#while-result").text(output);
@@ -74,6 +81,9 @@ function runForLoop() {
         Use a for loop to add the numbers 1 through "number"
         into the variable "sum".
     */
+    for (sum = 0; sum < number; sum++) {
+        sum = number + "1";
+    }
 
     $("#for-result").text(sum);
 }
